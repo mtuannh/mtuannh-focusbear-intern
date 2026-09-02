@@ -23,3 +23,22 @@ Using an appropriate dependency array helps control when the effect needs to run
 Improper use of `useEffect` can cause unnecessary work if the effect runs after every render or runs more often than needed. For example, an effect that updates state can cause another render, which may cause the effect to run again.
 
 This can create repeated renders, unnecessary API requests, or even an infinite loop. It is better to only use `useEffect` when it is needed and make sure its dependencies are correct.
+
+
+### How does useMemo improve performance?
+
+`useMemo` can improve performance by caching the result of an expensive calculation. When the dependencies have not changed, React can reuse the previous result instead of running the calculation again.
+
+In this task, the calculation works with a large list of numbers. The result is reused when the component re-renders because the calculation does not depend on the `count` state.
+
+### When should you avoid using useMemo?
+
+I should avoid using `useMemo` for simple calculations that are already fast. Using it everywhere can make the code harder to read without providing a meaningful performance benefit.
+
+It is more useful when a calculation is actually expensive and does not need to run again when unrelated values change.
+
+### What happens if you remove useMemo from your implementation?
+
+If I remove `useMemo`, the expensive calculation will run again every time the component re-renders. For example, clicking the `Increase Count` button would cause the calculation to run again even though the calculation does not depend on `count`.
+
+This can become inefficient when the calculation is expensive or the component re-renders frequently.
