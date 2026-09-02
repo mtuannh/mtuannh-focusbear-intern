@@ -49,3 +49,9 @@ One potential problem is that the JSX can become difficult to read if an element
 One common issue is forgetting to give each item in a list a unique `key` when using `.map()`. React uses the key to keep track of each item and update the list correctly.
 
 Another issue is changing the state directly instead of creating a new array. For example, it is better to use `setItems([...items, newItem])` rather than changing the existing array directly. This helps React detect the state change and update the UI correctly.
+
+### What are the advantages of client-side routing?
+
+Client-side routing allows users to move between different pages in a React application without fully reloading the browser page. This can make navigation faster and provide a smoother user experience.
+
+It also allows different React components to be displayed based on the current URL. In this task, the `Home` component is displayed at `/` and the `Profile` component is displayed at `/profile`.
