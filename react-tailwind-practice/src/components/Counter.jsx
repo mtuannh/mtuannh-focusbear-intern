@@ -1,15 +1,18 @@
 import { useState } from 'react'
+import Button from './Button'
 
 function Counter() {
 const [count, setCount] = useState(0)
 
 return (
-    <div>
-    <p>Count: {count}</p>
+    <div className="flex flex-col items-center gap-4">
+    <p className="text-2xl font-semibold text-gray-800">
+        Count: {count}
+    </p>
 
-    <button onClick={() => setCount(count + 1)}>
+    <Button onClick={() => setCount(count + 1)}>
         Increment
-    </button>
+    </Button>
     </div>
 )
 }

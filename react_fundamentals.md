@@ -35,3 +35,11 @@ Components can also receive different data through props, so the same component 
 If we modify state directly instead of using `setState`, React may not know that the state has changed, so the component may not re-render and show the updated value.
 
 Using `setState` is the correct way to update state because it tells React that the state has changed and the UI needs to be updated.
+
+### What are the advantages of using Tailwind CSS?
+
+Tailwind CSS makes it easier to style components directly in the JSX using utility classes. I can quickly change things like spacing, colours, font sizes, and layout without creating separate CSS rules. It is also useful for keeping the styling close to the component I am working on.
+
+### What are some potential pitfalls?
+
+One potential problem is that the JSX can become difficult to read if an element has too many Tailwind classes. It can also take some time to remember the different utility classes, especially when first learning Tailwind CSS.
