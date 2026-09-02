@@ -43,3 +43,9 @@ Tailwind CSS makes it easier to style components directly in the JSX using utili
 ### What are some potential pitfalls?
 
 One potential problem is that the JSX can become difficult to read if an element has too many Tailwind classes. It can also take some time to remember the different utility classes, especially when first learning Tailwind CSS.
+
+### What are some common issues when working with lists in React?
+
+One common issue is forgetting to give each item in a list a unique `key` when using `.map()`. React uses the key to keep track of each item and update the list correctly.
+
+Another issue is changing the state directly instead of creating a new array. For example, it is better to use `setItems([...items, newItem])` rather than changing the existing array directly. This helps React detect the state change and update the UI correctly.
