@@ -23,3 +23,9 @@ This task helped me understand the basic setup of a React project with Vite and 
 One useful thing I learned is that Tailwind allows me to build and adjust the UI by adding utility classes to elements instead of writing a lot of separate CSS. This can make it easier to quickly change the layout and styling of a component.
 
 Overall, I now have a better understanding of how to set up a React frontend environment and verify that the styling tools are working correctly.
+
+### Why are components important in React? (#32)
+
+Components are important because they help break a React application into smaller and reusable parts. Each component can handle a specific part of the UI, which makes the code easier to understand and maintain.
+
+Components can also receive different data through props, so the same component can be reused with different information. In my task, the `HelloWorld` component uses the `name` prop to display different names without changing the component itself.
