@@ -29,3 +29,9 @@ Overall, I now have a better understanding of how to set up a React frontend env
 Components are important because they help break a React application into smaller and reusable parts. Each component can handle a specific part of the UI, which makes the code easier to understand and maintain.
 
 Components can also receive different data through props, so the same component can be reused with different information. In my task, the `HelloWorld` component uses the `name` prop to display different names without changing the component itself.
+
+### What happens if we modify state directly instead of using `setState`? (#31)
+
+If we modify state directly instead of using `setState`, React may not know that the state has changed, so the component may not re-render and show the updated value.
+
+Using `setState` is the correct way to update state because it tells React that the state has changed and the UI needs to be updated.
