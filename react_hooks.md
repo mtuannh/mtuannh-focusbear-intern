@@ -42,3 +42,21 @@ It is more useful when a calculation is actually expensive and does not need to 
 If I remove `useMemo`, the expensive calculation will run again every time the component re-renders. For example, clicking the `Increase Count` button would cause the calculation to run again even though the calculation does not depend on `count`.
 
 This can become inefficient when the calculation is expensive or the component re-renders frequently.
+
+### What problem does useCallback solve?
+
+`useCallback` helps keep the same function reference between component re-renders when its dependencies have not changed. This can be useful when passing a function as a prop to a memoized child component.
+
+Without `useCallback`, a new function can be created every time the parent re-renders, which may cause the child to re-render unnecessarily.
+
+### How does useCallback work differently from useMemo?
+
+`useCallback` is used to cache a function, while `useMemo` is used to cache the result of a calculation.
+
+For example, `useCallback` can keep the same function reference between renders, while `useMemo` can keep the result of an expensive calculation so that it does not need to be calculated again when the dependencies have not changed.
+
+### When would useCallback not be useful?
+
+`useCallback` is not useful for every function. If a function is simple and the component does not have a performance problem, using `useCallback` may just make the code more complicated without providing a meaningful benefit.
+
+It is more useful when a function is passed to a memoized child component or when keeping a stable function reference is important.
