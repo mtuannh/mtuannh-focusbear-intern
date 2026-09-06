@@ -47,3 +47,77 @@ I then removed the conflict markers, kept the changes that I wanted, marked the 
 I learned that merge conflicts happen when Git cannot automatically combine changes from different branches. They are not necessarily a problem with Git, but rather a situation where a developer needs to decide which changes should be kept.
 
 I also learned that it is important to understand what changed on each branch before resolving a conflict. After resolving the conflict, I should test the project again to make sure the final changes work as expected.
+
+# Advanced Git Commands
+
+## git checkout main -- <file>
+
+### What does it do?
+
+This command restores a specific file to the version that exists on the `main` branch without switching branches or affecting other files.
+
+### When would I use it?
+
+I would use it when I have made unwanted changes to a particular file and want to restore the version from another branch. It can be useful in a long-running project when I only want to undo changes to one file without affecting other work.
+
+### What did I learn?
+
+I learned that `git checkout` can be used for more than switching branches. It can also restore a specific file from another branch.
+
+---
+
+## git cherry-pick <commit>
+
+### What does it do?
+
+`git cherry-pick` applies the changes from a specific commit to the current branch. It allows me to take one particular change without merging the entire branch.
+
+### When would I use it?
+
+I would use cherry-pick when a useful fix or feature exists in another branch but I do not want to merge all of that branch's changes. This could be useful in a project with multiple developers when a specific bug fix needs to be added to another branch quickly.
+
+### What did I learn?
+
+I learned that cherry-pick is useful when I need a specific commit rather than an entire branch. I also learned that the commit needs to be tested after cherry-picking because the changes are being applied in a different branch context.
+
+---
+
+## git log
+
+### What does it do?
+
+`git log` displays the commit history of the repository. It can show information such as commit messages, authors and commit dates.
+
+### When would I use it?
+
+I would use `git log` when I need to understand how the project has changed over time or investigate when a particular change was introduced. It is especially useful in long-running projects with multiple developers.
+
+### What did I learn?
+
+Using `git log --oneline --graph --all` made it easier to understand how branches and commits were connected. It gives a much clearer overview of the project's history than looking at individual commits.
+
+---
+
+## git blame <file>
+
+### What does it do?
+
+`git blame` shows which commit and author last modified each line of a file.
+
+### When would I use it?
+
+I would use `git blame` when I find a line of code that I do not understand and want to know when or why it was added. I could then use the commit ID with `git show` to investigate the original change.
+
+### What did I learn?
+
+I learned that `git blame` is useful for understanding the history of specific lines rather than just looking at the overall commit history. It can help developers find the context behind existing code in a large project.
+
+---
+
+## Overall Reflection
+
+These commands are useful for understanding and managing changes in a long-running project. They provide more control over individual files, commits and the history of the codebase.
+
+The command I found most interesting was `git cherry-pick` because it allows a specific change to be moved between branches without merging everything. I also found `git blame` useful because it can help identify the history behind a particular line of code.
+
+I think these commands would become more useful as I work on larger projects with more developers and more complex Git histories.
