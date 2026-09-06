@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import Button from './Button'
+import { useState } from "react";
+import Button from "./Button";
 
 function Counter() {
-const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-return (
+  return (
     <div className="flex flex-col items-center gap-4">
-    <p className="text-2xl font-semibold text-gray-800">
-        Count: {count}
-    </p>
+      <p className="text-2xl font-semibold text-gray-800">Count: {count}</p>
 
-    <Button onClick={() => setCount(count + 1)}>
-        Increment
-    </Button>
+      <Button onClick={() => setCount(count + 1)}>Increment</Button>
     </div>
-)
+  );
 }
 
-export default Counter
+export default Counter;

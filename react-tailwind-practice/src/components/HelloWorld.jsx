@@ -1,9 +1,9 @@
 function HelloWorld({ name }) {
-    return (
+  return (
     <div>
-        <h1>Hello, {name}!</h1>
+      <h1>Hello, {name}!</h1>
     </div>
-    )
-    }
+  );
+}
 
-export default HelloWorld
+export default HelloWorld;

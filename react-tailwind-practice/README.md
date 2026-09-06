@@ -14,3 +14,4 @@ npm install tailwindcss @tailwindcss/vite
 
 ## Run the project
 npm run dev
+```

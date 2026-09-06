@@ -1,29 +1,27 @@
-import { useCallback, useState } from 'react'
-import ChildButton from './ChildButton'
+import { useCallback, useState } from "react";
+import ChildButton from "./ChildButton";
 
 function UseCallbackDemo() {
-    const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-    const handleChildClick = useCallback(() => {
-    console.log('Child button clicked')
-    }, [])
+  const handleChildClick = useCallback(() => {
+    console.log("Child button clicked");
+  }, []);
 
-    return (
+  return (
     <div className="flex flex-col items-center gap-4">
-        <p className="text-xl font-semibold">
-        Count: {count}
-        </p>
+      <p className="text-xl font-semibold">Count: {count}</p>
 
-        <button
+      <button
         onClick={() => setCount(count + 1)}
         className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800"
-        >
+      >
         Increase Parent Count
-        </button>
+      </button>
 
-        <ChildButton onClick={handleChildClick} />
+      <ChildButton onClick={handleChildClick} />
     </div>
-    )
+  );
 }
 
-export default UseCallbackDemo
+export default UseCallbackDemo;
