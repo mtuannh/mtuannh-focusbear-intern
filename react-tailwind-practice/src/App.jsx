@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>Redux Toolkit Counter</h1>
-
+      <p>This change was made through a Pull Request.</p>
       <Counter />
       <CounterMessage />
 
