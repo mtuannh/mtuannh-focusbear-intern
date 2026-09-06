@@ -27,3 +27,23 @@ This also helps keep commits more organised because each commit can contain a sp
 I would stage changes without committing when I want to prepare specific changes for a commit but I am not ready to save them yet. For example, if I have modified several files but only want to commit some of them, I can stage the files I need and check git status before committing.
 
 During this process, I can also unstage a file if I change my mind or accidentally added the wrong file. This gives me a chance to check my changes before creating the commit.
+
+# Git Merge Conflicts
+
+## What caused the conflict?
+
+The conflict happened because I made changes to the same part of the same file on two different branches.
+
+I first created a `conflict-practice` branch and changed the file there. I then switched back to `main` and made a different change to the same part of the file. When I tried to merge the branch back into `main`, Git could not automatically decide which version should be kept, so it created a merge conflict.
+
+## How did you resolve it?
+
+I used GitHub Desktop to identify the conflicted file and compare the changes from the two branches. I reviewed both versions and decided what the final version of the file should contain.
+
+I then removed the conflict markers, kept the changes that I wanted, marked the conflict as resolved and committed the merge.
+
+## What did you learn?
+
+I learned that merge conflicts happen when Git cannot automatically combine changes from different branches. They are not necessarily a problem with Git, but rather a situation where a developer needs to decide which changes should be kept.
+
+I also learned that it is important to understand what changed on each branch before resolving a conflict. After resolving the conflict, I should test the project again to make sure the final changes work as expected.
