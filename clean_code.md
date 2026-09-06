@@ -34,3 +34,18 @@ Refactoring the names made the purpose of the code much clearer. Instead of usin
 ### What I learned
 
 This task helped me understand that good naming is an important part of clean code. Variable and function names should explain their purpose clearly and make the code easier for other developers to understand.
+
+
+## Writing Small, Focused Functions Reflection
+
+### Why is breaking down functions beneficial?
+
+Breaking down a large function makes the code easier to understand, test and maintain. Each small function can focus on one specific task, which makes it easier to find and fix problems.
+
+### How did refactoring improve the structure of the code?
+
+The original function was responsible for counting users, calculating scores and displaying results all at once. I separated these responsibilities into smaller functions such as `countActiveUsers`, `calculateTotalScore`, `calculateAverageScore` and `displayResults`. This made the main `processUsers` function easier to read because it now mainly coordinates the smaller functions.
+
+### What I learned
+
+I learned that a function should ideally have one clear responsibility. Smaller functions can make a codebase easier to understand and maintain, especially when different parts of the code need to be changed later.
