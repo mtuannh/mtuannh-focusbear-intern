@@ -164,3 +164,38 @@ For example:
 
 ```text
 Fix counter increment logic
+
+
+# Pull Requests
+
+## Why are PRs important in a team workflow?
+
+Pull Requests are important because they allow developers to review changes before they are merged into the main codebase. They provide a place for team members to discuss the implementation, suggest improvements and identify potential problems.
+
+PRs are especially useful when multiple developers are working on the same project because they help keep the main branch stable and make changes easier to review.
+
+## What makes a well-structured PR?
+
+A well-structured PR should have a clear and meaningful title and a description that explains what was changed and why.
+
+The changes should be focused on a specific task rather than mixing many unrelated changes together. It is also useful to include information about testing so reviewers know how the changes were checked.
+
+## What did you learn from reviewing an open-source PR?
+
+I reviewed an open-source Pull Request and noticed that the discussion focused on more than just whether the code worked. Reviewers also considered code quality, readability, testing and how the changes fitted into the existing project.
+
+I found it useful to see how reviewers provide feedback and how developers respond to that feedback before the changes are approved.
+
+## My Pull Request
+
+For this task, I created a feature branch, made a small change to my React test project and pushed the branch to GitHub.
+
+I then created a Pull Request from the feature branch into `main` with a clear title and description. This helped me understand the workflow of making a change on a separate branch and having it reviewed before merging it into the main branch.
+
+## Feedback
+
+I requested feedback on my Pull Request from a peer or mentor. The main purpose of the feedback was to check whether the change was clear and whether the PR description provided enough information for someone else to understand the change.
+
+## Reflection
+
+This task helped me understand that a Pull Request is not just a way to merge code. It is also a communication and review process. The discussion and feedback around a PR can help catch problems and improve the quality of the code before it reaches the main branch.
