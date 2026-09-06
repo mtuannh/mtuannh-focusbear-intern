@@ -49,3 +49,17 @@ The original function was responsible for counting users, calculating scores and
 ### What I learned
 
 I learned that a function should ideally have one clear responsibility. Smaller functions can make a codebase easier to understand and maintain, especially when different parts of the code need to be changed later.
+
+## Avoiding Code Duplication Reflection
+
+### What were the issues with duplicated code?
+
+The original example had the same calculation repeated in three different functions. This makes the code longer and can cause problems if the calculation needs to be changed later. We would have to update the same logic in multiple places, which increases the chance of making a mistake.
+
+### How did refactoring improve maintainability?
+
+I moved the repeated calculation into one reusable function called `calculateScoreWithBonus`. The same function can now be used whenever the calculation is needed. This reduces duplication and means that if the calculation changes in the future, I only need to update it in one place.
+
+### What I learned
+
+This task helped me understand the DRY principle. Avoiding unnecessary duplication makes code easier to maintain because there is less repeated logic to manage. However, I also learned that not every repeated line needs to be immediately turned into a function. The goal is to remove meaningful duplication without making the code unnecessarily complicated.
