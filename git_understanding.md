@@ -150,3 +150,17 @@ For this task, I created several commits in a test file and intentionally introd
 The process helped me understand how Git can be used as a debugging tool, rather than only for managing and sharing code.
 
 One thing I found useful was that I did not need to understand exactly which line caused the problem before starting the process. I only needed a known good version and a known bad version, and `git bisect` helped narrow down where the problem was introduced.
+
+
+# Writing Meaningful Commit Messages
+
+## What makes a good commit message?
+
+A good commit message should be clear, specific and concise. It should describe what was changed without including unnecessary information.
+
+I think a good commit message should make sense when looking at the Git history without needing to open the commit. Using an action-oriented style, such as "Add", "Fix", "Update" or "Remove", also makes the purpose of the change clear.
+
+For example:
+
+```text
+Fix counter increment logic
