@@ -1,4 +1,4 @@
 export function calculateTotal(price, quantity) {
     const total = price * quantity;
-    return total;
+    return total + 10;
 }
