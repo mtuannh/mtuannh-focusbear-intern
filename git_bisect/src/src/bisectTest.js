@@ -6,3 +6,7 @@ export function calculateTotal(price, quantity) {
 export function calculateLabel(price, quantity) {
     return `Total: ${calculateTotal(price, quantity)}`;
 }
+
+export function isValidQuantity(quantity) {
+    return quantity > 0;
+}
