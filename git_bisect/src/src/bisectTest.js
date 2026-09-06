@@ -1,3 +1,4 @@
 export function calculateTotal(price, quantity) {
-  return price * quantity;
+    const total = price * quantity;
+    return total;
 }
