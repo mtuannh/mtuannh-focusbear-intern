@@ -1,0 +1,1 @@
+This file is used to practise resolving Git merge conflicts.
