@@ -63,3 +63,18 @@ I moved the repeated calculation into one reusable function called `calculateSco
 ### What I learned
 
 This task helped me understand the DRY principle. Avoiding unnecessary duplication makes code easier to maintain because there is less repeated logic to manage. However, I also learned that not every repeated line needs to be immediately turned into a function. The goal is to remove meaningful duplication without making the code unnecessarily complicated.
+
+
+## Refactoring Code for Simplicity Reflection
+
+### What made the original code complex?
+
+The original code had several nested `if` statements and repeated conditions. It was difficult to quickly understand the main logic because the conditions were spread across multiple levels. It also used a longer `for` loop when the same task could be done more simply with `filter()`.
+
+### How did refactoring improve it?
+
+I simplified the conditions and moved the eligibility checks into a separate `isEligibleUser` function. I also replaced the `for` loop with `filter()`. This made the main function shorter and easier to understand while keeping the same functionality.
+
+### What I learned
+
+I learned that refactoring is not always about adding more code or more abstractions. Sometimes the best solution is to remove unnecessary complexity and express the same logic in a simpler way. Simple code is easier to read, debug and maintain.
