@@ -121,3 +121,32 @@ These commands are useful for understanding and managing changes in a long-runni
 The command I found most interesting was `git cherry-pick` because it allows a specific change to be moved between branches without merging everything. I also found `git blame` useful because it can help identify the history behind a particular line of code.
 
 I think these commands would become more useful as I work on larger projects with more developers and more complex Git histories.
+
+
+# Git Bisect
+
+## What does git bisect do?
+
+`git bisect` helps identify which commit introduced a bug into a project. It works by using a binary search between a known good commit and a known bad commit.
+
+I tell Git which commit is good and which commit is bad, and Git checks a commit in the middle of that range. I then test that version and tell Git whether it is good or bad. Git continues narrowing down the possible commits until it identifies the first bad commit.
+
+## When would you use it in a real-world debugging situation?
+
+I would use `git bisect` when I know that a feature worked at some point in the past but is currently broken, and there have been many commits since the last known working version.
+
+For example, if a bug appeared somewhere during a long-running project with many developers and I could not easily identify which change caused it, `git bisect` would help me find the problematic commit much faster than manually checking every commit.
+
+## How does it compare to manually reviewing commits?
+
+Manually reviewing commits can take a long time, especially when there are many changes. `git bisect` is more efficient because it uses binary search to reduce the number of commits that need to be tested.
+
+Instead of checking every commit one by one, I only need to test a smaller number of commits and tell Git whether each one is good or bad.
+
+## My Experience
+
+For this task, I created several commits in a test file and intentionally introduced a bug into one of them. I then used `git bisect` to find the commit that introduced the incorrect calculation.
+
+The process helped me understand how Git can be used as a debugging tool, rather than only for managing and sharing code.
+
+One thing I found useful was that I did not need to understand exactly which line caused the problem before starting the process. I only needed a known good version and a known bad version, and `git bisect` helped narrow down where the problem was introduced.
