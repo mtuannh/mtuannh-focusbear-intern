@@ -1,67 +1,57 @@
-const DISCOUNT = 0.1;
+const DISCOUNT_RATE = 0.1;
+const MINIMUM_AGE = 18;
+const MINIMUM_SCORE = 50;
 
-class UserManager {
-constructor(users) {
-    this.users = users;
+function isEligibleUser(user) {
+return (
+    user &&
+    user.active &&
+    user.age >= MINIMUM_AGE &&
+    user.score > MINIMUM_SCORE
+);
 }
 
-processUsers() {
-    let x = 0;
-    let y = 0;
+function calculateTotalScore(users) {
+    return users
+    .filter(isEligibleUser)
+    .reduce((total, user) => total + user.score, 0);
+}
 
-    for (let i = 0; i < this.users.length; i++) {
-    if (this.users[i]) {
-        if (this.users[i].active === true) {
-        if (this.users[i].age >= 18) {
-            if (this.users[i].score > 50) {
-            x += this.users[i].score;
-            y++;
-            }
-        }
-        }
-    }
-    }
+function countEligibleUsers(users) {
+    return users.filter(isEligibleUser).length;
+}
 
-    if (y > 0) {
-    console.log('Average:', x / y);
-    } else {
-    console.log('Average:', 0);
-    }
+function calculateAverageScore(totalScore, userCount) {
+    return userCount > 0 ? totalScore / userCount : 0;
+}
 
+function calculateDiscount(amount) {
+  return amount * DISCOUNT_RATE;
+}
+
+function generateUserReport(users) {
+    const totalScore = calculateTotalScore(users);
+    const eligibleUserCount = countEligibleUsers(users);
+    const averageScore = calculateAverageScore(
+    totalScore,
+    eligibleUserCount
+    );
+    const discount = calculateDiscount(totalScore);
+    const finalAmount = totalScore - discount;
+
+    console.log('Average:', averageScore);
     console.log('User report');
-    console.log('Total:', x);
+    console.log('Total:', totalScore);
+    console.log('Discount:', discount);
+    console.log('Final:', finalAmount);
 
-    const discount1 = x * 0.1;
-    console.log('Discount:', discount1);
-
-    const discount2 = x * 0.1;
-    console.log('Final:', x - discount2);
-
-    // Old calculation
-    // const oldTotal = x * 0.2;
-    // console.log(oldTotal);
-
-    return x;
-}
-
-sendEmail(user) {
-    console.log('Sending email to ' + user.email);
-}
-
-saveUser(user) {
-    console.log('Saving user ' + user.name);
-}
-
-deleteUser(user) {
-    console.log('Deleting user ' + user.name);
-}
+    return totalScore;
 }
 
 const users = [
-{ name: 'John', age: 25, active: true, score: 80 },
-{ name: 'Sarah', age: 30, active: true, score: 60 },
-{ name: 'Mike', age: 17, active: true, score: 90 },
+    { name: 'John', age: 25, active: true, score: 80 },
+    { name: 'Sarah', age: 30, active: true, score: 60 },
+    { name: 'Mike', age: 17, active: true, score: 90 },
 ];
 
-const manager = new UserManager(users);
-manager.processUsers();
+generateUserReport(users);
