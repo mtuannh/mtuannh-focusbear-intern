@@ -1,16 +1,13 @@
 function calculateDiscount(price, userType) {
-  // if user type is student then discount
+  // Students receive a 10% discount.
     if (userType === 'student') {
-    // calculate discount
     return price - price * 0.1;
     }
 
-    // if user type is staff then discount
+    // Staff receive a 20% discount.
     if (userType === 'staff') {
-    // calculate discount
     return price - price * 0.2;
     }
 
-    // return price
     return price;
 }

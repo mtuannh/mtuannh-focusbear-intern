@@ -78,3 +78,18 @@ I simplified the conditions and moved the eligibility checks into a separate `is
 ### What I learned
 
 I learned that refactoring is not always about adding more code or more abstractions. Sometimes the best solution is to remove unnecessary complexity and express the same logic in a simpler way. Simple code is easier to read, debug and maintain.
+
+
+## Commenting & Documentation Reflection
+
+### When should you add comments?
+
+Comments should be added when they provide useful information that is not immediately clear from the code. For example, comments can explain business rules, the reason behind a particular decision, or something that might otherwise be confusing to another developer. Documentation such as JSDoc can also be useful for explaining how a function should be used.
+
+### When should you avoid comments and instead improve the code?
+
+I should avoid comments when they only describe what the code is already doing. For example, a comment such as `// calculate discount` does not add much value if the code already clearly shows the calculation. In these cases, it is better to improve the variable or function names and make the code easier to understand by itself.
+
+### What I learned
+
+This task helped me understand that more comments do not always mean better code. Good comments should explain information that cannot be easily understood from the code itself. Clear naming and simple code should be used first, with comments added when they provide extra context. 
