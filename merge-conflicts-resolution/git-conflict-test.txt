@@ -1,1 +1,2 @@
 This file is used to practise resolving Git merge conflicts.
+This line was added from the conflict-practice branch.
