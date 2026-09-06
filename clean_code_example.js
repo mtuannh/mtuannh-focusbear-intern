@@ -1,15 +1,11 @@
-function f(a,b,c){
-let x=0;
-for(let i=0;i<a.length;i++){
-if(a[i].active===true){
-if(a[i].age>=18){
-x=x+a[i].score;
-}
-}
-}
-if(c===true){
-return x/b;
-}else{
-return x;
-}
+function calculateAverageScore(users, numberOfUsers, calculateAverage) {
+    const totalScore = users
+    .filter((user) => user.active && user.age >= 18)
+    .reduce((total, user) => total + user.score, 0);
+
+    if (calculateAverage) {
+    return totalScore / numberOfUsers;
+    }
+
+    return totalScore;
 }
