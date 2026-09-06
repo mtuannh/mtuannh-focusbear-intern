@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import CounterMessage from "./CounterMessage";
+import DebuggingPractice from "./DebuggingPractice";
 
 function App() {
   return (
@@ -7,8 +8,9 @@ function App() {
       <h1>Redux Toolkit Counter</h1>
 
       <Counter />
-
       <CounterMessage />
+
+      <DebuggingPractice />
     </div>
   );
 }
