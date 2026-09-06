@@ -1,19 +1,19 @@
-function f(u) {
-    let x = 0;
+function calculateTotalScore(users) {
+    let totalScore = 0;
 
-    for (let i = 0; i < u.length; i++) {
-    if (u[i].a && u[i].s > 50) {
-        x += u[i].s;
+    for (let index = 0; index < users.length; index++) {
+        if (users[index].isActive && users[index].score > 50) {
+        totalScore += users[index].score;
+        }
     }
+
+    return totalScore;
     }
 
-    return x;
-}
-
-const u = [
-    { a: true, s: 80 },
-    { a: false, s: 90 },
-    { a: true, s: 70 },
+    const users = [
+    { isActive: true, score: 80 },
+    { isActive: false, score: 90 },
+    { isActive: true, score: 70 },
 ];
 
-console.log(f(u));
+console.log(calculateTotalScore(users));
