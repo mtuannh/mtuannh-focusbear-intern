@@ -93,3 +93,18 @@ I should avoid comments when they only describe what the code is already doing. 
 ### What I learned
 
 This task helped me understand that more comments do not always mean better code. Good comments should explain information that cannot be easily understood from the code itself. Clear naming and simple code should be used first, with comments added when they provide extra context. 
+
+
+## Handling Errors & Edge Cases Reflection
+
+### What was the issue with the original code?
+
+The original function only checked whether the array had values. It did not properly handle other invalid inputs, such as `null` or an array containing non-numeric values. It also used an `if` block around the main logic, which made the function more nested than necessary.
+
+### How does handling errors improve reliability?
+
+Handling invalid inputs makes the function more reliable because it can respond safely instead of crashing or producing unexpected results. In this example, invalid inputs return `0` instead of causing an error.
+
+### What I learned
+
+I learned that functions should consider unexpected inputs and edge cases, not just the normal situation. I also learned how guard clauses can handle invalid cases early and make the main logic easier to read.
