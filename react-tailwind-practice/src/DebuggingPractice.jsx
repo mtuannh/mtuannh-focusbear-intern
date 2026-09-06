@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function DebuggingPractice() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
-        setCount((previousCount) => previousCount + 1);
+      setCount((previousCount) => previousCount + 1);
     }, 1000);
 
     return () => clearInterval(timer);
-    }, []);
+  }, []);
 
-    return (
+  return (
     <div>
-        <h2>Debugging Practice</h2>
-        <p>Count: {count}</p>
+      <h2>Debugging Practice</h2>
+      <p>Count: {count}</p>
     </div>
-    );
+  );
 }
 
 export default DebuggingPractice;
