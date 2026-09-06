@@ -108,3 +108,18 @@ Handling invalid inputs makes the function more reliable because it can respond 
 ### What I learned
 
 I learned that functions should consider unexpected inputs and edge cases, not just the normal situation. I also learned how guard clauses can handle invalid cases early and make the main logic easier to read.
+
+
+## Writing Unit Tests for Clean Code Reflection
+
+### How do unit tests help keep code clean?
+
+Unit tests help keep code reliable by checking that individual functions behave as expected. They also make it safer to refactor code because I can run the tests afterwards to make sure the existing behaviour has not been broken.
+
+### What issues did you find while testing?
+
+The tests covered both normal and unexpected inputs. The function handled the test cases correctly, including an empty array, `null`, and an array containing a non-number. I did not find any failing cases after writing the tests.
+
+### What I learned
+
+This task helped me understand how unit tests can support clean code. Testing small functions makes it easier to find problems early and gives more confidence when changing or refactoring code. I also learned how to use Vitest to write and run tests in a Vite project.

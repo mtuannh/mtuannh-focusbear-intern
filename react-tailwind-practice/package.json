@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "format": "prettier . --write",
+  "format:check": "prettier . --check",
+  "test": "vitest",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
     "@tailwindcss/vite": "^4.3.3",
@@ -35,6 +36,7 @@
     "eslint-plugin-react-refresh": "^0.5.4",
     "globals": "^17.11.0",
     "prettier": "3.9.6",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0"
   }
 }
