@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "ignorePaths": [
+    "node_modules/**",
+    "**/node_modules/**",
+    "package-lock.json"
+  ],
+  "words": [
+    "Focusbear",
+    "Husky",
+    "markdownlint",
+    "cspell",
+    "mtuannh",
+    "standup",
+    "onboarding",
+    "tailwindcss",
+    "formik",
+    "i18n",
+    "redux",
+    "vite",
+    "vitest",
+    "Kanban",
+    "ergonomics",
+    "Tiimo",
+    "Routinery",
+    "oaicite",
+    "oneline",
+    "overcomplicate",
+    "Formik"
+  ]
+}
