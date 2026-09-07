@@ -45,3 +45,17 @@ In this task I used `jest.mock()` and `jest.fn()` so the component still thought
 One common mistake is not waiting for the data. At first my component shows "Loading...", so if I look for the user name too early the test will fail. I had to use `findByText` so Jest waits until the mocked data appears on the screen.
 
 Another problem is forgetting to mock the API. Then the test might try to call the real server, which can be slow or fail. I also learned that async tests need `async/await`, otherwise Jest might finish before the UI updates.
+
+## Testing Redux with Jest
+
+### What was the most challenging part of testing Redux?
+
+The most challenging part was understanding that I can test the reducer directly, without rendering a React component. At first I thought I had to click buttons in the UI to check Redux, but I only needed to send an action and check the new state.
+
+The async test was also a bit new for me. I had to dispatch `incrementAsync` and wait for it to finish before checking the store. Once I understood that, the test was quite short.
+
+### How do Redux tests differ from React component tests?
+
+React component tests check what the user sees, like text on the screen or clicking a button. Redux tests check the state instead. I call a reducer or dispatch an action and then look at `state.value`.
+
+I think this is simpler in some ways, because I do not need React Testing Library for these tests. But it is also different, because a passing Redux test does not always mean the UI is correct. It only means the slice and actions work as expected.
