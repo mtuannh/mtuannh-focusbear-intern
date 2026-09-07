@@ -11,9 +11,6 @@
     "format:check": "prettier . --check",
     "test": "vitest",
     "preview": "vite preview",
-    "markdown:lint": "markdownlint-cli2 \"**/*.md\"",
-    "spellcheck": "cspell \"**/*.md\"",
-    "prepare": "husky",
     "test:jest": "jest --runInBand"
   },
   "dependencies": {
@@ -35,21 +32,18 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.1.0",
-    "cspell": "^10.2.2",
     "eslint": "^10.9.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.4",
     "globals": "^17.11.0",
-    "husky": "^9.1.7",
     "jest": "^30.5.1",
-    "markdownlint-cli2": "^0.23.2",
     "prettier": "3.9.6",
     "vite": "^8.2.2",
     "vitest": "^5.0.0"
   },
   "jest": {
-  "testMatch": [
-    "**/*.test.cjs"
-  ]
-}
+    "testMatch": [
+      "**/*.test.cjs"
+    ]
+  }
 }

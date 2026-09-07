@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "markdown:lint": "markdownlint-cli2",
+    "spellcheck": "cspell \"**/*.md\"",
+    "prepare": "husky"
+  },
   "devDependencies": {
+    "cspell": "^10.2.2",
     "eslint": "^10.10.0",
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.23.2",
     "prettier": "3.9.6"
   }
 }

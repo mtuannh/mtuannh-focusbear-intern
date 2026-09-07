@@ -2,6 +2,8 @@ name: Markdown Checks
 
 on:
   pull_request:
+  push:
+    branches: [main]
 
 jobs:
   markdown-check:
@@ -15,12 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
       - name: Check Markdown formatting
-        run: npx markdownlint-cli2 "**/*.md"
+        run: npm run markdown:lint
 
       - name: Check spelling
-        run: npx cspell "**/*.md"
+        run: npm run spellcheck
