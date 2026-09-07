@@ -2,6 +2,7 @@ import Counter from "./Counter";
 import CounterMessage from "./CounterMessage";
 import DebuggingPractice from "./DebuggingPractice";
 import WelcomeMessage from "./components/WelcomeMessage";
+import UserCard from "./components/UserCard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <DebuggingPractice />
       <WelcomeMessage />
+      <UserCard />
     </div>
   );
 }
