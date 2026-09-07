@@ -31,3 +31,17 @@ This is better because if I change the code later but the UI still works the sam
 The hardest part was not the click itself. It was setting up Jest so it could run a React component test. My project uses Vite, so I needed extra packages and config to handle JSX and a browser-like environment.
 
 After that, clicking the button was quite simple. I just had to remember that `userEvent.click` is async, so I needed to wait for it. At first I was also a bit unsure how to find the button, but using `getByRole` made more sense when I thought about it from the user's point of view.
+
+## Mocking API calls in Jest
+
+### Why is it important to mock API calls in tests?
+
+It is important because tests should not depend on a real API. If the API is down or slow, my test might fail even when the component is actually fine. Mocking also makes the test faster and more predictable, because I can decide what data the API should return.
+
+In this task I used `jest.mock()` and `jest.fn()` so the component still thought it got a user from the API, but no real network request was made.
+
+### What are some common pitfalls when testing asynchronous code?
+
+One common mistake is not waiting for the data. At first my component shows "Loading...", so if I look for the user name too early the test will fail. I had to use `findByText` so Jest waits until the mocked data appears on the screen.
+
+Another problem is forgetting to mock the API. Then the test might try to call the real server, which can be slow or fail. I also learned that async tests need `async/await`, otherwise Jest might finish before the UI updates.
